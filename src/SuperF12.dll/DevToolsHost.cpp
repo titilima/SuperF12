@@ -25,6 +25,7 @@ static UINT WM_HTML_GETOBJECT = ::RegisterWindowMessage(_T("WM_HTML_GETOBJECT"))
 
 CDevToolsHost::CDevToolsHost(HWND hTrident) : m_hTrident(hTrident)
 {
+    // TODO: IE 11 Support!
     CoCreateInstance(CLSID_IEDTExplorerBar, NULL, CLSCTX_INPROC_SERVER,
         IID_IEDevToolsSite, reinterpret_cast<PVOID *>(&m_dt));
 }

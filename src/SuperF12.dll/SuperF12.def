@@ -1,0 +1,6 @@
+LIBRARY	"SuperF12"
+
+EXPORTS
+
+InitSuperF12
+ShowDevTools

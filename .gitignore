@@ -2,7 +2,9 @@ Debug/
 Release/
 
 *.aps
+*.exp
 *.ncb
+*.pdb
 *.suo
 *.user
 

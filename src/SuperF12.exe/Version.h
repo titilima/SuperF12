@@ -12,9 +12,9 @@
 
 #pragma once
 
-#define F12_VER         1.0.0.9
-#define F12_RCVER       1,0,0,9
-#define F12_VERSTR      "1.0.0.9"
-#define F12_RCVERSTR    "1,0,0,9"
+#define F12_VER         1.0.0.10
+#define F12_RCVER       1,0,0,10
+#define F12_VERSTR      "1.0.0.10"
+#define F12_RCVERSTR    "1,0,0,10"
 
 #endif // VERSION_H

@@ -53,8 +53,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,11
- PRODUCTVERSION 1,0,0,11
+ FILEVERSION 1,0,0,12
+ PRODUCTVERSION 1,0,0,12
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -71,12 +71,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Titi Studio"
             VALUE "FileDescription", "SuperF12"
-            VALUE "FileVersion", "1, 0, 0, 11"
+            VALUE "FileVersion", "1, 0, 0, 12"
             VALUE "InternalName", "SuperF12"
             VALUE "LegalCopyright", "Copyright (C) 2001-2013"
             VALUE "OriginalFilename", "SuperF12.dll"
             VALUE "ProductName", "SuperF12"
-            VALUE "ProductVersion", "1, 0, 0, 11"
+            VALUE "ProductVersion", "1, 0, 0, 12"
         END
     END
     BLOCK "VarFileInfo"

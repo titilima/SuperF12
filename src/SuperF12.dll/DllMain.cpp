@@ -8,7 +8,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "Common.h"
-#include <detours.h>
+#include "Detours\detours.h"
 
 typedef HMODULE (WINAPI * FNLoadLibraryW)(PCWSTR);
 

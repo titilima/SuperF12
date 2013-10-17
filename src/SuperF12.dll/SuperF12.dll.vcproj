@@ -123,7 +123,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="..\..\..\ThirdParty\include\Detours"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;SUPERF12DLL_EXPORTS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;SUPERF12DLL_EXPORTS;"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="2"
@@ -175,7 +175,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="&quot;%MYTOOLS%\Titi Soft\PDBCopy\PDBCopy.bat&quot; $(TargetPath)"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>
@@ -300,14 +300,13 @@
 			Name="detours"
 			>
 			<File
-				RelativePath="..\..\..\ThirdParty\source\Detours\detours.cpp"
+				RelativePath=".\Detours\detours.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions="DETOURS_X86;DETOURS_32BIT"
 						UsePrecompiledHeader="0"
 						PrecompiledHeaderThrough=""
@@ -318,7 +317,6 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions="DETOURS_X86;DETOURS_32BIT"
 						UsePrecompiledHeader="0"
 						PrecompiledHeaderThrough=""
@@ -326,11 +324,11 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\ThirdParty\include\Detours\detours.h"
+				RelativePath=".\Detours\detours.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\..\ThirdParty\source\Detours\disasm.cpp"
+				RelativePath=".\Detours\disasm.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"

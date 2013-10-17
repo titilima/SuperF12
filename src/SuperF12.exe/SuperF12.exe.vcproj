@@ -169,7 +169,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="&quot;%MYTOOLS%\Titi Soft\PDBCopy\PDBCopy.bat&quot; $(TargetPath)"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>

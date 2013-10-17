@@ -15,7 +15,11 @@ static const CLSID CLSID_IEDTExplorerBar = {
     0x1a6fe369, 0xf28c, 0x4ad9, { 0xa3, 0xe6, 0x2b, 0xcb, 0x50, 0x80, 0x7c, 0xf1 }
 };
 
-static const IID IID_IEDevToolsSite = {
+static const IID IID_IEDevTools = {
+    0x181e3828, 0xfe6e, 0x4602, { 0xa3, 0x27, 0x78, 0x6a, 0x76, 0xfd, 0xfb, 0x3a }
+};
+
+static const IID IID_IEDevToolsOld = {
     0x059055df, 0x6bb0, 0x402a, { 0xba, 0x48, 0x58, 0xbf, 0xa3, 0x43, 0x71, 0x9c }
 };
 
@@ -25,9 +29,15 @@ static UINT WM_HTML_GETOBJECT = ::RegisterWindowMessage(_T("WM_HTML_GETOBJECT"))
 
 CDevToolsHost::CDevToolsHost(HWND hTrident) : m_hTrident(hTrident)
 {
-    // TODO: IE 11 Support!
+    // IE 11
     CoCreateInstance(CLSID_IEDTExplorerBar, NULL, CLSCTX_INPROC_SERVER,
-        IID_IEDevToolsSite, reinterpret_cast<PVOID *>(&m_dt));
+        IID_IEDevTools, reinterpret_cast<PVOID *>(&m_dt));
+    if (NULL == m_dt) {
+        // IE 8 ~ IE 10
+        CoCreateInstance(CLSID_IEDTExplorerBar, NULL, CLSCTX_INPROC_SERVER,
+            IID_IEDevToolsOld, reinterpret_cast<PVOID *>(&m_dt));
+
+    }
 }
 
 STDMETHODIMP_(ULONG) CDevToolsHost::AddRef(void)
